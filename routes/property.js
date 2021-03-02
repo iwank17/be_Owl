@@ -16,6 +16,11 @@ const data = [
     name: 'Sandratek Permai',
     addr: 'Jl Sandratek',
     price: 1650800000
+  },
+  {
+    name: 'H. Naan',
+    addr: 'Waru',
+    price: 200000
   }
 ];
 
@@ -26,7 +31,6 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   const body = req.body;
-  console.warn(body);
   data.push(body);
   res.status(200).end();
 });
